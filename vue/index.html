@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .h{
+            color: darkorange;
+        }
+        .s{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+     <div id="app">
+       {{message}}
+   </div>
+   <div id="app1">
+       <p :title="title">智障</p>
+   </div>
+   <div id="app2">
+       <button v-on:click="e">按钮</button>
+   </div>
+   <div id="app3">
+       <button @click="e">点击切换图片</button>
+       <img :src="imgUrl" alt="">
+   </div>
+   <div id="app4">
+       <ul>
+           <li v-for="t in ts">{{t}}</li>
+       </ul>
+   </div>
+   <div id="app5">
+       <a v-for="list in lists" :href="list.url">{{list.name}}</a>
+   </div>
+   <div id="app6">
+       <button @click="e('Hello')">按钮</button>
+   </div>
+    <div id="app7">
+           <p v-for="(list,index) in lists">{{list}}  索引值:{{index}}</p>
+   </div>
+   <div id="app8">
+       <input v-model="message">
+       <p>{{message}}</p>
+       
+   </div>
+   <div id="app9">
+       <p v-if="t">我现在看到你了</p>
+   </div>
+   
+  
+   <div id="app10">
+       <h2 :class="classOpject">Hello</h2>
+   </div>
+   <div id="app0">
+        <input v-on:keyup.ctrl.enter="e">
+   </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
